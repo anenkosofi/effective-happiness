@@ -15,8 +15,19 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
-  "rules": {},
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import"],
+  "rules": {
+    "import/first": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "react/prop-types": "off"
+  },
   "settings": {
     "import/resolver": {
       "typescript": {}

@@ -18,8 +18,13 @@
     "baseUrl": "./src",
     "paths": {
       "@assets/*": ["./assets/*"],
-      "@components/*": ["./components/*"]
-    }
+      "@components/*": ["./components/*"],
+      "@styles/*": ["./styles/*"],
+      "@types": ["./types"],
+      "@pages/*": ["./pages/*"],
+      "@constants": ["./constants"]
+    },
+    "types": ["vite-plugin-svgr/client"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
