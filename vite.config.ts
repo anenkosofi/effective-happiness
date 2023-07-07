@@ -13,6 +13,7 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src/types'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@constants': path.resolve(__dirname, './src/constants'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   },
   plugins: [svgr(), react()],
