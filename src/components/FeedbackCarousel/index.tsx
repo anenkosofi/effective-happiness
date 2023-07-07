@@ -9,13 +9,13 @@ import 'swiper/css';
 const FeedbackCarousel: FC = () => {
   const swiperParams = {
     spaceBetween: 24,
-    slidesPerView: 'auto',
+    slidesPerView: 'auto' as const,
     loop: true,
     grabCursor: true,
   };
 
   return (
-    <Swiper className="feedback__carousel" {...swiperParams}>
+    <Swiper {...swiperParams} className="feedback__carousel">
       <ul className="feedback__list">
         {feedbacks.map(({ rating, text, author }, index) => (
           <SwiperSlide key={index}>
